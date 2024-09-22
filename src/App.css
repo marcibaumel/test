@@ -1,38 +1,76 @@
+/* Reset some basic styles */
+body, ul, li, h1, p, div, header {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* App-wide styling */
 .App {
-  text-align: center;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Header styling */
+.header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10px 20px;
+  background-color: #333;
   color: white;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+/* Logo styling */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Navigation menu styling */
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu ul li {
+  cursor: pointer;
+}
+
+.nav-menu ul li:hover {
+  color: #ddd;
+}
+
+/* Mobile menu toggle styling */
+.menu-toggle {
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Login/Logout button styling */
+.login-section button {
+  background-color: #555;
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.login-section button:hover {
+  background-color: #888;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .header {
+    justify-content: space-between;
   }
 }
